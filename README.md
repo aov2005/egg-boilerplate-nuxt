@@ -1,6 +1,6 @@
-# egg-boilerplate-simple
+# egg-boilerplate-nuxt
 
-Boilerplate for egg quickstart. 
+Boilerplate for egg + nuxt quickstart. 
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
