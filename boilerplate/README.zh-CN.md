@@ -2,11 +2,45 @@
 
 {{description}}
 
+## 说明
+nuxt 配置文件
+```bash
+{{proDir}}/nuxt.config.json
+```
+添加了pretty的extend
+```javascript
+    // app/controller/home.js
+    ...
+    return this.success(data, message = '')
+    ...
+    // 前端
+    {
+        "data": data,
+        "errno": 0,
+        "errmsg": ""
+    }
+-------------or----------------
+    // app/controller/home.js
+    ...
+    // return this.fail(errno, errmsg = '', data)
+    // 或者直接传msg
+    return this.fail(errmsg = '', data)
+    ...
+    // 前端
+    {
+        "data": data,
+        "errno": errno || 1000,
+        "errmsg": ""
+    }
+```
+
+`注意`：上线部署之前需要先运行一次`nuxt-build`，之后`npm start`才能正常部署，否则会渲染失败
+
 ## 快速入门
 
 <!-- 在此次添加使用文档 -->
 
-如需进一步了解，参见 [egg 文档][egg]。
+如需进一步了解，参见 [egg 文档][egg]  [nuxt 文档][nuxt]。
 
 ### 本地开发
 
@@ -37,3 +71,4 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
+[nuxt]: https://nuxtjs.org
